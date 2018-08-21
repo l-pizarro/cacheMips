@@ -1,2 +1,2 @@
 # cacheMips
-Best cache configuration getter
+Best cache configuration
