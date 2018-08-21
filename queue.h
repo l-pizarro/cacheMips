@@ -1,11 +1,7 @@
 #pragma once
 #include <stdlib.h>
 #include <stdio.h>
-
-typedef struct Node {
-  int value;
-  struct Node * next;
-} Node;
+#include "node.h"
 
 typedef struct Queue {
   Node *head;
@@ -16,5 +12,6 @@ typedef struct Queue {
 Queue* createQueue();
 void enQueue(Queue* queue, int value);
 void deQueue(Queue* queue, int* head);
-void removeValue(Queue* queue, int value);
+void removeFromQueue(Queue* queue, int value);
+void enQueueExclusive(Queue* queue, int value);
 void freeQueue(Queue* queue);

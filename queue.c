@@ -25,13 +25,12 @@ void enQueue(Queue* queue, int value) {
 }
 
 void deQueue(Queue* queue, int* head) {
-  int temp = queue->head->value;
+  (*head) = queue->head->value;
   queue->head = queue->head->next;
-  (*head) = temp;
   queue->size --;
 }
 
-void removeValue(Queue* queue, int value) {
+void removeFromQueue(Queue* queue, int value) {
   int removed;
   if (queue->head->value == value) {
     deQueue(queue, &removed);
@@ -50,6 +49,18 @@ void removeValue(Queue* queue, int value) {
     }
     queue->size --;
   }
+}
+
+void enQueueExclusive(Queue* queue, int value) {
+  Node* actual = queue->head;
+  while (actual != NULL) {
+    if (actual->value == value) {
+      removeFromQueue(queue, value);
+      break;
+    }
+    actual = actual->next;
+  }
+  enQueue(queue, value);
 }
 
 void freeQueue(Queue* queue) {
