@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include "node.h"
 
+// Queue Structure
+
 typedef struct Queue {
   Node *head;
   Node *tail;

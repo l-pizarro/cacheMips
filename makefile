@@ -6,4 +6,4 @@ all: functions.c $(HEADERS)
 clean:
 	-rm -f program.out
 run:
-	./program.out -n addresses.txt -m 32 -p 2
+	./program.out -n addresses.txt -m 64 -p 2

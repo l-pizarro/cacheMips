@@ -1,5 +1,7 @@
 #include "stack.h"
 
+// Stack implementation
+
 Stack* createStack() {
   Stack* s = (Stack*)calloc(1,sizeof(Stack));
   s->head = NULL;

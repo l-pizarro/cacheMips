@@ -1,10 +1,11 @@
 #pragma once
 #include <stdlib.h>
 #include <stdio.h>
-#include <getopt.h>
-#include <math.h>
+#include <unistd.h>
 #include "queue.h"
 #include "stack.h"
+
+// Functions to obtain the best cache configuration (Headers)
 
 int searchFor(int address, int** cache, int blocks, int associativity);
 void init(int argc, char* const []);

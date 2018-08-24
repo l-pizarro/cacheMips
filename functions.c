@@ -2,6 +2,8 @@
 #include "queue.h"
 #include "stack.h"
 
+// Functions to obtain the best cache configuration
+
 int searchFor(int address, int** cache, int blocks, int associativity) {
   int location;
   int set;

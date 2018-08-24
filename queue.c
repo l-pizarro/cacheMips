@@ -1,5 +1,7 @@
 #include "queue.h"
 
+// Queue implementation
+
 Queue* createQueue() {
   Queue* q = (Queue*)calloc(1,sizeof(Queue));
   q->head = NULL;

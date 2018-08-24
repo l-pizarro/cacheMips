@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include "node.h"
 
+// Stack structure
+
 typedef struct Stack {
   Node *head;
   int size;
